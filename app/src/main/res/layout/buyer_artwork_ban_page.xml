@@ -5,72 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="382dp"
+        android:layout_height="272dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387"
+        app:srcCompat="@drawable/whatsapp_image_2023_07_18_at_7_58_45_pm" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="47dp"
         android:layout_height="46dp"
-        app:srcCompat="@drawable/image"
-        tools:layout_editor_absoluteX="316dp"
-        tools:layout_editor_absoluteY="79dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118"
+        app:srcCompat="@drawable/image" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="63dp"
         android:layout_height="45dp"
         android:text="Hello!\nNazar"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
 
     <TextView
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Why do you want to report this artwork?"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="162dp" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="382dp"
-        android:layout_height="272dp"
-        app:srcCompat="@drawable/whatsapp_image_2023_07_18_at_7_58_45_pm"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="162dp" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Endless River"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="371dp" />
-
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
-        android:text="Artwork dıfferent than promısed"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="476dp" />
-
-    <Button
-        android:id="@+id/button22"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
-        android:text="Inapproprıate content"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="444dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
 
     <Button
         android:id="@+id/button20"
@@ -78,8 +73,38 @@
         android:layout_height="32dp"
         android:text="artwork dıd not reach the gallery"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="541dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:text="Artwork dıfferent than promısed"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:text="Inapproprıate content"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
 
     <Button
         android:id="@+id/button21"
@@ -87,16 +112,24 @@
         android:layout_height="32dp"
         android:text="More money taken than bıd"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="509dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="249dp"
         android:layout_height="33dp"
         android:text="Other"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="573dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849" />
 
     <EditText
         android:id="@+id/editTextText3"
@@ -105,8 +138,25 @@
         android:ems="10"
         android:inputType="text"
         android:text=""
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="606dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endless River"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.557" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
