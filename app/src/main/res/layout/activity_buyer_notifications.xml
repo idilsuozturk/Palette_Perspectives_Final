@@ -10,16 +10,24 @@
         android:layout_width="63dp"
         android:layout_height="45dp"
         android:text="Hello!\nNazar"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="74dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="47dp"
         android:layout_height="46dp"
-        app:srcCompat="@drawable/image"
-        tools:layout_editor_absoluteX="322dp"
-        tools:layout_editor_absoluteY="73dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:srcCompat="@drawable/image" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar11"
@@ -27,7 +35,13 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView28"
@@ -35,14 +49,21 @@
         android:layout_height="wrap_content"
         android:text="Notifications"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="135dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.211" />
 
     <ScrollView
-        android:layout_width="372dp"
-        android:layout_height="389dp"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="171dp">
+        android:layout_width="344dp"
+        android:layout_height="359dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,8 +75,11 @@
         android:id="@+id/imageView14"
         android:layout_width="155dp"
         android:layout_height="135dp"
-        app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="560dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953"
+        app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

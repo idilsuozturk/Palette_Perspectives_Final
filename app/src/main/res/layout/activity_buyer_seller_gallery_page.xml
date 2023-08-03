@@ -7,19 +7,27 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        app:srcCompat="@drawable/image"
         android:layout_width="47dp"
         android:layout_height="46dp"
-        tools:layout_editor_absoluteX="319dp"
-        tools:layout_editor_absoluteY="72dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128"
+        app:srcCompat="@drawable/image" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="63dp"
         android:layout_height="45dp"
         android:text="Hello!\nNazar"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="85dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.128" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar15"
@@ -27,22 +35,23 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Suiçmez's Gallery"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="150dp" />
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <HorizontalScrollView
         android:layout_width="410dp"
         android:layout_height="192dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="185dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -50,36 +59,64 @@
             android:orientation="vertical" />
     </HorizontalScrollView>
 
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suiçmez's Gallery"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.212" />
+
     <Button
         android:id="@+id/button26"
         android:layout_width="254dp"
         android:layout_height="47dp"
         android:text="Buy Tour"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="386dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
 
     <Button
         android:id="@+id/button27"
         android:layout_width="254dp"
         android:layout_height="47dp"
         android:text="go to artıst's page"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="433dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button28"
         android:layout_width="254dp"
         android:layout_height="47dp"
         android:text="get notıfıcatıons"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="480dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.701" />
 
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="161dp"
         android:layout_height="161dp"
-        app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="527dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.924"
+        app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
