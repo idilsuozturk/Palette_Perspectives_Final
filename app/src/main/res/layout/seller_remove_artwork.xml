@@ -9,9 +9,12 @@
         android:id="@+id/imageView7"
         android:layout_width="363dp"
         android:layout_height="459dp"
-        app:srcCompat="@drawable/img_7814_2"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="78dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.286"
+        app:srcCompat="@drawable/img_7814_2" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar6"
@@ -19,15 +22,25 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="113dp"
         android:layout_height="17dp"
         android:text="Başak Suiçmez"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="546dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
 
     <EditText
         android:id="@+id/editTextNumber3"
@@ -35,25 +48,37 @@
         android:layout_height="26dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="544dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.791" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="47dp"
         android:layout_height="46dp"
-        app:srcCompat="@drawable/image"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="546dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814"
+        app:srcCompat="@drawable/image" />
 
     <Button
         android:id="@+id/button12"
-        android:layout_width="82dp"
-        android:layout_height="32dp"
+        android:layout_width="143dp"
+        android:layout_height="31dp"
         android:text="Change Prıce"
         android:textSize="8sp"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.862" />
 
     <TextView
         android:id="@+id/textView13"
@@ -61,8 +86,12 @@
         android:layout_height="wrap_content"
         android:text="Works"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="563dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.394"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
 
     <Button
         android:id="@+id/button13"
@@ -70,27 +99,39 @@
         android:layout_height="37dp"
         android:text="Remove Artwork"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="592dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="86dp"
-        android:layout_height="32dp"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
         android:text="Change Name"
         android:textSize="7sp"
-        tools:layout_editor_absoluteX="276dp"
-        tools:layout_editor_absoluteY="493dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
 
     <EditText
         android:id="@+id/editTextNumber2"
-        android:layout_width="30dp"
-        android:layout_height="16dp"
+        android:layout_width="45dp"
+        android:layout_height="28dp"
         android:ems="10"
         android:inputType="number"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="563dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819" />
 
     <EditText
         android:id="@+id/editTextText"
@@ -102,7 +143,11 @@
         android:text="Strawberries"
         android:textColor="#FFFFFF"
         android:textSize="10sp"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="491dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.705" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
