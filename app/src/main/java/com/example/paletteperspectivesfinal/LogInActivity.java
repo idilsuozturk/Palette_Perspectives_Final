@@ -15,15 +15,17 @@ public class LogInActivity extends AppCompatActivity {
 
         Button loginButton = findViewById(R.id.loginButton);
 
-        // Get the value from the intent extras (set by MainActivity)
         boolean isBuyerSelected = getIntent().getBooleanExtra("buyerSelected", false);
-
+        boolean isAdminSelected = getIntent().getBooleanExtra("adminSelected", false);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent;
                 if (isBuyerSelected) {
                     intent = new Intent(LogInActivity.this, MainBuyerActivity.class);
+                }
+                else if (isAdminSelected) {
+                    intent = new Intent(LogInActivity.this, MainAdminActivity.class);
                 }
                 else {
                     intent = new Intent(LogInActivity.this, MainSellerActivity.class);

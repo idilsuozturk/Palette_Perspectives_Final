@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                intent.putExtra("adminSelected", true);
                 startActivity(intent);
             }
         });
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LogInActivity.class);
-                intent.putExtra("buyerSelected", true); // Add an extra to indicate buyer selected
+                intent.putExtra("buyerSelected", true);
                 startActivity(intent);
             }
         });
