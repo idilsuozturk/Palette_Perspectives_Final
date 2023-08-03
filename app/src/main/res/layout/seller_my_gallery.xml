@@ -7,19 +7,27 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        app:srcCompat="@drawable/image"
         android:layout_width="47dp"
         android:layout_height="46dp"
-        tools:layout_editor_absoluteX="317dp"
-        tools:layout_editor_absoluteY="65dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:srcCompat="@drawable/image" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="63dp"
         android:layout_height="45dp"
         android:text="Hello!\nBaşak"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="66dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar7"
@@ -27,21 +35,35 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Gallery"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="139dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269" />
 
     <HorizontalScrollView
         android:layout_width="407dp"
         android:layout_height="207dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="165dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -51,43 +73,51 @@
     </HorizontalScrollView>
 
     <Button
-        android:id="@+id/button32"
+        android:id="@+id/button35"
         android:layout_width="254dp"
         android:layout_height="47dp"
-        android:text="Add/Remove pıeces"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="386dp" />
-
-    <Button
-        android:id="@+id/button33"
-        android:layout_width="254dp"
-        android:layout_height="47dp"
-        android:text="change pıeces"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="433dp" />
+        android:text="add new gallery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.868" />
 
     <Button
         android:id="@+id/button34"
         android:layout_width="254dp"
         android:layout_height="47dp"
         android:text="remove gallery"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="480dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.799" />
 
     <Button
-        android:id="@+id/button35"
+        android:id="@+id/button33"
         android:layout_width="254dp"
         android:layout_height="47dp"
-        android:text="add new gallery"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="527dp" />
+        android:text="change pıeces"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="151dp"
-        android:layout_height="199dp"
-        app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="548dp" />
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:text="Add/Remove pıeces"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
