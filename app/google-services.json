@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "304591350068",
+    "project_id": "paletteperspective-f36ce",
+    "storage_bucket": "paletteperspective-f36ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304591350068:android:57bb35f9ef85364bcd9d61",
+        "android_client_info": {
+          "package_name": "com.example.paletteperspectivesfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304591350068-98aqbtu6fpst7v6rql5hm04dqebr177b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWB7ZyWBiXHD9TB2Xox3Cmqu290EFhZsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304591350068-98aqbtu6fpst7v6rql5hm04dqebr177b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
