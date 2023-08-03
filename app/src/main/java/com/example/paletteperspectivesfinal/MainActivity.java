@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Button adminButton = findViewById(R.id.admin);
         Button buyerButton = findViewById(R.id.buyer);
         Button sellerButton = findViewById(R.id.seller);
@@ -21,14 +20,21 @@ public class MainActivity extends AppCompatActivity {
         adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                intent.putExtra("adminSelected", true);
+                startActivity(intent);
             }
         });
 
         buyerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                intent.putExtra("buyerSelected", true);
+                startActivity(intent);
             }
         });
+
 
         sellerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
 
     }

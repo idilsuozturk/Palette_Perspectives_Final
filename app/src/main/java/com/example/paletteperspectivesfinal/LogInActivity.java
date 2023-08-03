@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LogInActivity extends AppCompatActivity {
@@ -15,10 +14,22 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
 
         Button loginButton = findViewById(R.id.loginButton);
+
+        boolean isBuyerSelected = getIntent().getBooleanExtra("buyerSelected", false);
+        boolean isAdminSelected = getIntent().getBooleanExtra("adminSelected", false);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LogInActivity.this, MainSellerActivity.class);
+                Intent intent;
+                if (isBuyerSelected) {
+                    intent = new Intent(LogInActivity.this, MainBuyerActivity.class);
+                }
+                else if (isAdminSelected) {
+                    intent = new Intent(LogInActivity.this, MainAdminActivity.class);
+                }
+                else {
+                    intent = new Intent(LogInActivity.this, MainSellerActivity.class);
+                }
                 startActivity(intent);
             }
         });
