@@ -17,7 +17,7 @@ public class HardCopyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.seller_upload_hardcopy);
+        setContentView(R.layout.activity_seller_upload_hardcopy);
 
         Button auctionButton = findViewById(R.id.button4);
 

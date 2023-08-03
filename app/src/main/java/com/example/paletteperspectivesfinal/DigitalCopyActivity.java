@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,7 +24,7 @@ public class DigitalCopyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.seller_upload_digitalcopy);
+        setContentView(R.layout.activity_seller_upload_digitalcopy);
 
         Button uploadButton = findViewById(R.id.button9);
         uploadButton.setOnClickListener(new View.OnClickListener() {

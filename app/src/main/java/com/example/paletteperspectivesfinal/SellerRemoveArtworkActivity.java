@@ -3,12 +3,10 @@ package com.example.paletteperspectivesfinal;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.paletteperspectivesfinal.R;
-
 public class SellerRemoveArtworkActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.seller_profile);
+        setContentView(R.layout.activity_seller_profile);
     }
 }

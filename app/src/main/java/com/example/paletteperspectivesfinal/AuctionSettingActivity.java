@@ -8,7 +8,7 @@ public class AuctionSettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.seller_auction_settings);
+        setContentView(R.layout.activity_seller_auction_settings);
 
         // Add your code to handle the auction settings here
     }
