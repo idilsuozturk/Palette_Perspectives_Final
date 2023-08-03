@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="89dp"
+        android:layout_height="30dp"
+        android:text="Log out"
+        android:textSize="9sp"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazar Aktosun"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nazaraktosun657"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="119dp" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="105dp"
+        android:layout_height="33dp"
+        android:text="Change Password"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="105dp"
+        android:layout_height="33dp"
+        android:text="Change Account Name"
+        android:textSize="6.5sp"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="102dp"
+        android:layout_height="127dp"
+        app:srcCompat="@drawable/image"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purchased Artworks"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="341dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="256dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/sym_action_email"
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="70dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

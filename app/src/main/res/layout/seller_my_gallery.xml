@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        app:srcCompat="@drawable/image"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        tools:layout_editor_absoluteX="317dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="63dp"
+        android:layout_height="45dp"
+        android:text="Hello!\nBaşak"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Gallery"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <HorizontalScrollView
+        android:layout_width="407dp"
+        android:layout_height="207dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="165dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:text="Add/Remove pıeces"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:text="change pıeces"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="433dp" />
+
+    <Button
+        android:id="@+id/button34"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:text="remove gallery"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="480dp" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:text="add new gallery"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="527dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="151dp"
+        android:layout_height="199dp"
+        app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

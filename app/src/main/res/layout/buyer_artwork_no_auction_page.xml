@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="66dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/image"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="basaksuicmez6473"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="585dp" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Başak Suiçmez"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="563dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="26dp"
+        android:layout_height="22dp"
+        app:srcCompat="@android:drawable/checkbox_on_background"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="596dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        app:srcCompat="@drawable/img_7814_2"
+        android:layout_width="363dp"
+        android:layout_height="482dp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="125dp"
+        android:layout_height="43dp"
+        android:text="see gallery"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="125dp"
+        android:layout_height="43dp"
+        android:text="buy"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="607dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Strawberries"
+        android:textColor="#FDFDFD"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="514dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="50dp"
+        android:layout_height="41dp"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteX="315dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber5"
+        android:layout_width="151dp"
+        android:layout_height="34dp"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="561dp" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to see it clear?"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="631dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/stat_sys_warning"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report Image"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="663dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

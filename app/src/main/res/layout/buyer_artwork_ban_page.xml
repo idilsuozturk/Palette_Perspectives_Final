@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        app:srcCompat="@drawable/image"
+        tools:layout_editor_absoluteX="316dp"
+        tools:layout_editor_absoluteY="79dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="63dp"
+        android:layout_height="45dp"
+        android:text="Hello!\nNazar"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="80dp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Why do you want to report this artwork?"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="382dp"
+        android:layout_height="272dp"
+        app:srcCompat="@drawable/whatsapp_image_2023_07_18_at_7_58_45_pm"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endless River"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:text="Artwork dıfferent than promısed"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:text="Inapproprıate content"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="444dp" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:text="artwork dıd not reach the gallery"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="541dp" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="330dp"
+        android:layout_height="32dp"
+        android:text="More money taken than bıd"
+        android:textSize="10sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="249dp"
+        android:layout_height="33dp"
+        android:text="Other"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="573dp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="329dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="606dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
