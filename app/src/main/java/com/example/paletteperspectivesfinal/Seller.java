@@ -19,6 +19,8 @@ public class Seller extends User{
     private Gallery gallery;
     public Seller(String name, int id, String password, int age) {
         super(name, id, password, age);
+        followers = 0;
+        bio = "";
     }
     public int getFollowers() {
         return followers;
@@ -114,6 +116,7 @@ public class Seller extends User{
             gallery.addArtPiece(auctionArtPiece);
         }
     }
+    //edit this method so that it allows user to create a second or third etc. gallery as well
     public void addGallery(){
         if(gallery == null){
             gallery = new Gallery();
