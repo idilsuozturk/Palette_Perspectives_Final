@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.paletteperspectivesfinal">
 
-    <application
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application xmlns:tools="http://schemas.android.com/tools"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,9 +11,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PalettePerspectivesFinal"
-        xmlns:tools="http://schemas.android.com/tools">
-    ">
+        android:theme="@style/Theme.PalettePerspectivesFinal">
+        <activity
+            android:name=".Registration"
+            android:exported="false" />
         <activity
             android:name=".LogInActivity"
             android:exported="false">
