@@ -34,6 +34,7 @@
         android:background="#E6C588"
         android:ems="10"
         android:fontFamily="cursive"
+        android:hint="email@gmail.com"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textSize="16sp"
@@ -51,6 +52,7 @@
         android:layout_height="wrap_content"
         android:background="#E6C588"
         android:ems="10"
+        android:hint="password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,6 +107,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInput"
         app:layout_constraintVertical_bias="0.315" />
+
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="119dp"
@@ -115,5 +118,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

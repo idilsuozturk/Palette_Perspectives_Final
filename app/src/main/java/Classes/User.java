@@ -1,3 +1,5 @@
+package Classes;
+
 public abstract class User {
     private String name;
     private int id;
@@ -33,10 +35,6 @@ public abstract class User {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public int getAge() {
         return age;
     }
@@ -45,10 +43,12 @@ public abstract class User {
         this.age = age;
     }
 
-    // Abstract methods
-    public abstract void createAccount();
 
-    public abstract void deleteAccount();
+    public void deleteAccount() {
+        //TO-DO delete account from database
+    }
 
-    public abstract void changePassword();
+    public void changePassword(String password) {
+        this.password = password;
+    }
 }

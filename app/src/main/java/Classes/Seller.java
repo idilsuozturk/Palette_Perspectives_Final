@@ -1,4 +1,4 @@
-package com.example.paletteperspectivesfinal;
+package Classes;
 
 import android.net.Uri;
 
@@ -17,17 +17,20 @@ public class Seller extends User{
     private int followers;
     private String bio;
     private String profilePhotoUrl;
-
     private ArtPiece[] portfolio;
     private ArrayList<ArtPiece> artPieces;
     private Gallery gallery;
+    private double rank;
 
 
     public Seller(String name, int id, String password, int age) {
         super(name, id, password, age);
         followers = 0;
         bio = "";
+        rank = 0;
     }
+
+
     public int getFollowers() {
         return followers;
     }
@@ -107,7 +110,7 @@ public class Seller extends User{
     //edit this method so that it allows user to create a second or third etc. gallery as well
     public void addGallery(){
         if(gallery == null){
-            gallery = new Gallery();
+            gallery = new Gallery;
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.paletteperspectivesfinal;
+package Classes;
 
 import static com.google.firebase.database.core.operation.OperationSource.Source.User;
 
@@ -10,10 +10,7 @@ public class Buyer extends User{
     private  ArrayList<ArtPiece> boughtArtPieces;
 
     public Buyer(String name, int id, String password, int age){
-        this.setName(name);
-        this.setId(id);
-        this.setPassword(password);
-        this.setAge(age);
+        super(name, id, password, age);
     }
 
     //Getters
