@@ -1,6 +1,8 @@
-/*package com.example.paletteperspectivesfinal;
+package com.example.paletteperspectivesfinal;
 
 import android.net.Uri;
+
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -15,7 +17,43 @@ public class Seller extends User{
 
     private ArtPiece[] portfolio;
     private Gallery gallery;
+    public Seller(String name, int id, String password, int age) {
+        super(name, id, password, age);
+    }
+    public int getFollowers() {
+        return followers;
+    }
 
+    public void setFollowers(int followers) {
+        this.followers = followers;
+    }
+
+    // Getter and setter for bio
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    // Getter and setter for portfolio
+    public ArtPiece[] getPortfolio() {
+        return portfolio;
+    }
+
+    public void setPortfolio(ArtPiece[] portfolio) {
+        this.portfolio = portfolio;
+    }
+
+    // Getter and setter for gallery
+    public Gallery getGallery() {
+        return gallery;
+    }
+
+    public void setGallery(Gallery gallery) {
+        this.gallery = gallery;
+    }
     public void UploadProfilePhoto(Uri imageURL){
         StorageReference storageReference;
         storageReference = FirebaseStorage.getInstance().getReference().child("profile_photos");
@@ -44,18 +82,42 @@ public class Seller extends User{
         this.profilePhotoUrl = profilePhotoUrl;
     }
 
-    @Override
-    public void createAccount() {
+    // Method to add a DigitalArtPiece to the gallery
+    public void addDigitalArtPiece(DigitalArtPiece artPiece) {
+        // Check if the gallery exists
+        if (gallery == null) {
+            // If the gallery is not created yet, create a new gallery
+            gallery = new Gallery();
+        }
 
+        // Add the digital art piece to the gallery
+        gallery.addArtPiece(artPiece);
+    }
+    //Method to add a Hard Copy Art piece to the gallery
+    public void addHardCopyArtPiece(HardcopyArtPiece hardcopyArtPiece) {
+        // Check if the gallery exists
+        if (gallery == null) {
+            // If the gallery is not created yet, create a new gallery
+            gallery = new Gallery();
+        }
+
+        // Add the hard copy art piece to the gallery
+        gallery.addArtPiece(hardcopyArtPiece);
+    }
+    public void removeArtPiece(ArtPiece artPiece){
+        if(gallery != null){
+            gallery.removeArtPiece(artPiece);
+        }
+    }
+    public void addAuctionArtPiece(AuctionArtPiece auctionArtPiece){
+        if(gallery != null){
+            gallery.addArtPiece(auctionArtPiece);
+        }
+    }
+    public void addGallery(){
+        if(gallery == null){
+            gallery = new Gallery();
+        }
     }
 
-    @Override
-    public void deleteAccount() {
-
-    }
-
-    @Override
-    public void changePassword() {
-
-    }
-}*/
+}

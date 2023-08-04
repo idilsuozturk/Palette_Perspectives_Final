@@ -1,25 +1,26 @@
-package com.example.paletteperspectivesfinal;
-
 public abstract class User {
     private String name;
-
-
     private int id;
     private String password;
     private int age;
 
-    public abstract void createAccount();
+    // Constructor
+    public User(String name, int id, String password, int age) {
+        this.name = name;
+        this.id = id;
+        this.password = password;
+        this.age = age;
+    }
 
-    public abstract void deleteAccount();
-
-    public abstract void changePassword();
-
+    // Getters and setters for attributes
     public String getName() {
         return name;
     }
-    public void setName(String name){
-        this.name=name;
+
+    public void setName(String name) {
+        this.name = name;
     }
+
     public int getId() {
         return id;
     }
@@ -27,6 +28,7 @@ public abstract class User {
     public void setId(int id) {
         this.id = id;
     }
+
     public String getPassword() {
         return password;
     }
@@ -35,12 +37,18 @@ public abstract class User {
         this.password = password;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
-    public void setAge(){
+    public void setAge(int age) {
         this.age = age;
     }
 
+    // Abstract methods
+    public abstract void createAccount();
+
+    public abstract void deleteAccount();
+
+    public abstract void changePassword();
 }
