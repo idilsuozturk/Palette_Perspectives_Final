@@ -8,13 +8,12 @@ public abstract class User {
     private String password;
     private int age;
 
-    public abstract void createAccount(){}
+    public abstract void createAccount();
 
-    public abstract void deleteAccount(){}
+    public abstract void deleteAccount();
 
-    public abstract void changePassword(){
+    public abstract void changePassword();
 
-    }
     public String getName() {
         return name;
     }

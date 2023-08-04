@@ -14,7 +14,6 @@ public class MainSellerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_seller);
 
-
         Button uploadArtworkButton = findViewById(R.id.button);
         Button removeArtworkButton = findViewById(R.id.button5);
 

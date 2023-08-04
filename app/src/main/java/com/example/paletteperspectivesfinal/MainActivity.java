@@ -35,17 +35,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         sellerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LogInActivity.class);
-                startActivity(intent);
+                // Here you should check if the user is logged in as a seller
+                // For demonstration purposes, I am using a boolean flag to simulate the login status
+                boolean isSellerLoggedIn = true;
+
+                if (isSellerLoggedIn) {
+                    Intent intent = new Intent(MainActivity.this, MainSellerActivity.class);
+                    startActivity(intent);
+                } else {
+                    // If the user is not logged in, you can navigate them to the login page
+                    Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                    startActivity(intent);
+                }
             }
         });
-
-
-
-
     }
 }
