@@ -92,7 +92,8 @@
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background1="?attr/colorPrimary"
+        android:background="#FCAE1E"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -174,9 +175,10 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wıthdraw from Auction"
+        android:layout_width="235dp"
+        android:layout_height="47dp"
+        android:background="#FCAE1E"
+        android:text="Wıthdraw from Auctıon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.763"

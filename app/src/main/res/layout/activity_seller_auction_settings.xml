@@ -121,8 +121,9 @@
 
     <Button
         android:id="@+id/uploadnew"
-        android:layout_width="72dp"
-        android:layout_height="32dp"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:background="#FCAE1E"
         android:text="Upload"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -136,7 +137,8 @@
         android:id="@+id/toolbar4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background1="?attr/colorPrimary"
+        android:background="#FCAE1E"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -38,7 +38,8 @@
         android:id="@+id/toolbar15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background1="?attr/colorPrimary"
+        android:background="#FCAE1E"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,6 +82,7 @@
         android:id="@+id/button26"
         android:layout_width="254dp"
         android:layout_height="47dp"
+        android:background="#FCAE1E"
         android:text="Buy Tour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +95,7 @@
         android:id="@+id/button27"
         android:layout_width="254dp"
         android:layout_height="47dp"
+        android:background="#FCAE1E"
         android:text="go to artıst's page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,13 +108,14 @@
         android:id="@+id/button28"
         android:layout_width="254dp"
         android:layout_height="47dp"
+        android:background="#FCAE1E"
         android:text="get notıfıcatıons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701" />
+        app:layout_constraintVertical_bias="0.703" />
 
     <ImageView
         android:id="@+id/imageView18"
