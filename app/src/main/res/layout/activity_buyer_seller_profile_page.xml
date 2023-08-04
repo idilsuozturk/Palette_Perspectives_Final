@@ -37,7 +37,6 @@
         android:id="@+id/toolbar8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background1="?attr/colorPrimary"
         android:background="#FCAE1E"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
