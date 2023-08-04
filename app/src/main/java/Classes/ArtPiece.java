@@ -3,21 +3,24 @@ package Classes;
 
 
 public abstract class ArtPiece {
+    private static int count = 1;
     private int id;
-    private int price;
     private String title;
     private Seller artist;
     private double rank;
+
+    public ArtPiece(String title, Seller artist) {
+        this.title = title;
+        this.artist = artist;
+        id = count;
+        count++;
+    }
 
 
 
     //GETTERS AND SETTERS
     public int getArtPieceId() {
         return id;
-    }
-
-    public int getPrice() {
-        return price;
     }
 
     public String getTitle() {
@@ -30,14 +33,6 @@ public abstract class ArtPiece {
 
     public double getRank() {
         return rank;
-    }
-
-    public void setArtPieceId(int id) {
-        this.id = id;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public void setTitle(String title) {
