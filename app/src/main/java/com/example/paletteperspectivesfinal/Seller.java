@@ -6,9 +6,12 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.auth.User;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.ArrayList;
 
 public class Seller extends User{
     private int followers;
@@ -16,7 +19,10 @@ public class Seller extends User{
     private String profilePhotoUrl;
 
     private ArtPiece[] portfolio;
+    private ArrayList<ArtPiece> artPieces;
     private Gallery gallery;
+
+
     public Seller(String name, int id, String password, int age) {
         super(name, id, password, age);
     }
@@ -84,35 +90,17 @@ public class Seller extends User{
 
     // Method to add a DigitalArtPiece to the gallery
     public void addDigitalArtPiece(DigitalArtPiece artPiece) {
-        // Check if the gallery exists
-        if (gallery == null) {
-            // If the gallery is not created yet, create a new gallery
-            gallery = new Gallery();
-        }
-
-        // Add the digital art piece to the gallery
-        gallery.addArtPiece(artPiece);
+       artPieces.add(artPiece);
     }
     //Method to add a Hard Copy Art piece to the gallery
     public void addHardCopyArtPiece(HardcopyArtPiece hardcopyArtPiece) {
-        // Check if the gallery exists
-        if (gallery == null) {
-            // If the gallery is not created yet, create a new gallery
-            gallery = new Gallery();
-        }
-
-        // Add the hard copy art piece to the gallery
-        gallery.addArtPiece(hardcopyArtPiece);
+        artPieces.add(hardcopyArtPiece);
     }
     public void removeArtPiece(ArtPiece artPiece){
-        if(gallery != null){
-            gallery.removeArtPiece(artPiece);
-        }
+        artPieces.remove(artPiece);
     }
     public void addAuctionArtPiece(AuctionArtPiece auctionArtPiece){
-        if(gallery != null){
-            gallery.addArtPiece(auctionArtPiece);
-        }
+        artPieces.add(auctionArtPiece);
     }
     public void addGallery(){
         if(gallery == null){
