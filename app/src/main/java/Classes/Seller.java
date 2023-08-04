@@ -6,12 +6,13 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.auth.User;
+
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
+
 
 public class Seller extends User{
     private int followers;
@@ -21,6 +22,8 @@ public class Seller extends User{
     private ArrayList<ArtPiece> artPieces;
     private Gallery gallery;
     private double rank;
+    private int numberOfSoldArtPieces; // Number of art pieces sold by the seller
+
 
 
     public Seller(String name, int id, String password, int age) {
@@ -28,6 +31,7 @@ public class Seller extends User{
         followers = 0;
         bio = "";
         rank = 0;
+        numberOfSoldArtPieces = 0;
     }
 
 
@@ -110,8 +114,7 @@ public class Seller extends User{
     //edit this method so that it allows user to create a second or third etc. gallery as well
     public void addGallery(){
         if(gallery == null){
-            gallery = new Gallery;
+            gallery = new Gallery();
         }
     }
-
 }

@@ -32,11 +32,8 @@ public class Buyer extends User{
         boughtArtPieces.add(artPiece);
     }
     public void addFavoritePiece(ArtPiece artPiece){
-        favouritePieces.
+        favouritePieces.add(artPiece);
     }
-
-
-
 
 
 
