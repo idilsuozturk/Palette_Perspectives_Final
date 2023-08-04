@@ -1,4 +1,4 @@
-package com.example.paletteperspectivesfinal;
+/*package com.example.paletteperspectivesfinal;
 
 import android.net.Uri;
 
@@ -58,4 +58,4 @@ public class Seller extends User{
     public void changePassword() {
 
     }
-}
+}*/

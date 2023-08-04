@@ -8,7 +8,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background_color" />
+        android:background="@drawable/background" />
 
     <ImageView
         android:id="@+id/imageView15"
@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387"
+        app:layout_constraintVertical_bias="0.328"
         app:srcCompat="@drawable/whatsapp_image_2023_07_18_at_7_58_45_pm" />
 
     <androidx.appcompat.widget.Toolbar
@@ -74,21 +74,21 @@
 
     <Button
         android:id="@+id/button20"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
+        android:layout_width="334dp"
+        android:layout_height="56dp"
         android:text="artwork dıd not reach the gallery"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintVertical_bias="0.844" />
 
     <Button
         android:id="@+id/button19"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
+        android:layout_width="334dp"
+        android:layout_height="56dp"
         android:text="Artwork dıfferent than promısed"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,55 +100,55 @@
 
     <Button
         android:id="@+id/button22"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
+        android:layout_width="334dp"
+        android:layout_height="56dp"
         android:text="Inapproprıate content"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="334dp"
+        android:layout_height="56dp"
+        android:text="More money taken than bıd"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
-
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="330dp"
-        android:layout_height="32dp"
-        android:text="More money taken than bıd"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.722" />
+        app:layout_constraintVertical_bias="0.76" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="249dp"
-        android:layout_height="33dp"
+        android:layout_width="328dp"
+        android:layout_height="61dp"
         android:text="Other"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.911" />
 
     <EditText
         android:id="@+id/editTextText3"
-        android:layout_width="329dp"
-        android:layout_height="36dp"
+        android:layout_width="334dp"
+        android:layout_height="59dp"
         android:ems="10"
         android:inputType="text"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.955" />
 
     <TextView
         android:id="@+id/textView30"
@@ -161,7 +161,7 @@
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557" />
+        app:layout_constraintVertical_bias="0.512" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
