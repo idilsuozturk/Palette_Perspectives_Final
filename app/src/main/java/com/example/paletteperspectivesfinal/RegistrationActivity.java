@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class RegistrationActivity extends AppCompatActivity {
     Button buttonReg;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
+    ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class RegistrationActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.passwordsign);
         buttonReg = findViewById(R.id.buttonsign);
         progressBar = findViewById(R.id.progressign);
+        backButton = findViewById(R.id.imageButton3);
 
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +91,15 @@ public class RegistrationActivity extends AppCompatActivity {
                                 }
                             }
                         });
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

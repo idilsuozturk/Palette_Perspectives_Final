@@ -24,25 +24,19 @@ public class SellerProfile extends AppCompatActivity {
         buttonLog = findViewById(R.id.logOutButton);
         user = auth.getCurrentUser();
         if (user == null) {
-            Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
         }
 
-        /*buttonLog.setOnClickListener(new View.OnClickListener() {
+        buttonLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
             }
-        });*/
-    }
-    public void logOut(View view) {
-
-        Intent intent = new Intent(SellerProfile.this, LogInActivityForSeller.class);
-        startActivity(intent);
-        finish();
+        });
     }
 }

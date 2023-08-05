@@ -28,10 +28,6 @@ public class LogInActivityForSeller extends AppCompatActivity {
     ImageButton backButton;
     FirebaseAuth mAuth;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
