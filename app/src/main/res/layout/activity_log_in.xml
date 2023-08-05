@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.198" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameInput"
         android:layout_width="195dp"
         android:layout_height="50dp"
@@ -46,15 +46,16 @@
         app:layout_constraintVertical_bias="0.183"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
         android:background="#E6C588"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.791"
