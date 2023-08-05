@@ -9,20 +9,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button buyerButton;
+    Button sellerButton;
+    Button areYouNewHere;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button adminButton = findViewById(R.id.admin);
-        Button buyerButton = findViewById(R.id.buyer);
-        Button sellerButton = findViewById(R.id.seller);
-        Button areYouNewHere = findViewById(R.id.signIn);
+        buyerButton = findViewById(R.id.buyer);
+        sellerButton = findViewById(R.id.seller);
+        areYouNewHere = findViewById(R.id.signIn);
 
         buyerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LogInActivityForBuyer.class);
+                Intent intent = new Intent(getApplicationContext(), LogInActivityForBuyer.class);
                 startActivity(intent);
                 finish();
             }
@@ -31,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         sellerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LogInActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         areYouNewHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Registration.class);
+                Intent intent = new Intent(getApplicationContext(), Registration.class);
                 startActivity(intent);
                 finish();
             }

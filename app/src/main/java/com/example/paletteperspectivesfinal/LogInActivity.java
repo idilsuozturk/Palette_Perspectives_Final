@@ -83,13 +83,5 @@ public class LogInActivity extends AppCompatActivity {
                         });
             }
         });
-
-        ImageButton backButton = findViewById(R.id.imageButton3);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
     }
 }
