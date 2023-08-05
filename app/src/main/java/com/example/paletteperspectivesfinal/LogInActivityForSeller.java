@@ -22,7 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LogInActivity extends AppCompatActivity {
+public class LogInActivityForSeller extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword;
     Button loginButton;
     FirebaseAuth mAuth;
@@ -30,7 +30,6 @@ public class LogInActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
             Intent intent = new Intent(getApplicationContext(), MainSellerActivity.class);
@@ -47,7 +46,13 @@ public class LogInActivity extends AppCompatActivity {
         editTextEmail = findViewById(R.id.nameInput);
         editTextPassword = findViewById(R.id.passwordInput);
         loginButton = findViewById(R.id.loginButton);
-
+        ImageButton backButton = findViewById(R.id.imageButton3);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,17 +62,17 @@ public class LogInActivity extends AppCompatActivity {
                 password = String.valueOf(editTextPassword.getText());
 
                 if (TextUtils.isEmpty(email)){
-                    Toast.makeText(LogInActivity.this, "Enter Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivityForSeller.this, "Enter Email", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(password)){
-                    Toast.makeText(LogInActivity.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogInActivityForSeller.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                            
+
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
@@ -75,7 +80,7 @@ public class LogInActivity extends AppCompatActivity {
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    Toast.makeText(LogInActivity.this, "Authentication failed.",
+                                    Toast.makeText(LogInActivityForSeller.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
 
                                 }

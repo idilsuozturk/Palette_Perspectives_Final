@@ -18,9 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-// ... (existing imports)
-
-public class Registration extends AppCompatActivity {
+public class RegistrationActivity extends AppCompatActivity {
 
     TextInputEditText editTextName, editTextSurname, editTextAge, editTextEmail, editTextPassword;
     Button buttonReg;
@@ -53,21 +51,21 @@ public class Registration extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)
                         || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-                    Toast.makeText(Registration.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
 
                 String ageString = String.valueOf(editTextAge.getText());
                 if (TextUtils.isEmpty(ageString)) {
-                    Toast.makeText(Registration.this, "Enter your age", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationActivity.this, "Enter your age", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
 
                 age = Integer.parseInt(ageString);
                 if (age < 18) {
-                    Toast.makeText(Registration.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationActivity.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
@@ -78,14 +76,14 @@ public class Registration extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Registration.this, "Account Created",
+                                    Toast.makeText(RegistrationActivity.this, "Account Created",
                                             Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
                                     // If sign-in fails, display a message to the user.
-                                    Toast.makeText(Registration.this, "Authentication failed.",
+                                    Toast.makeText(RegistrationActivity.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }

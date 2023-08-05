@@ -134,8 +134,8 @@
 
     <EditText
         android:id="@+id/editTextNumberPassword"
-        android:layout_width="220dp"
-        android:layout_height="28dp"
+        android:layout_width="219dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:inputType="numberPassword"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,8 +147,8 @@
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="219dp"
-        android:layout_height="25dp"
+        android:layout_width="221dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="text"
         android:text=""
@@ -161,8 +161,8 @@
 
     <EditText
         android:id="@+id/editTextText5"
-        android:layout_width="219dp"
-        android:layout_height="25dp"
+        android:layout_width="218dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="text"
         android:text=""
@@ -176,7 +176,7 @@
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="219dp"
-        android:layout_height="25dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="text"
         android:text=""
@@ -189,8 +189,8 @@
 
     <EditText
         android:id="@+id/editTextText4"
-        android:layout_width="219dp"
-        android:layout_height="25dp"
+        android:layout_width="221dp"
+        android:layout_height="51dp"
         android:ems="10"
         android:inputType="text"
         android:text=""

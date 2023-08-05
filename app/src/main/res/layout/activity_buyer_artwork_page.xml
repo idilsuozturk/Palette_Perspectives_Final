@@ -97,8 +97,8 @@
 
     <EditText
         android:id="@+id/editTextNumber5"
-        android:layout_width="151dp"
-        android:layout_height="34dp"
+        android:layout_width="166dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,15 +115,15 @@
         android:text="Do you want to see it clear?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintVertical_bias="0.87" />
 
     <ImageButton
         android:id="@+id/imageButton8"
-        android:layout_width="45dp"
-        android:layout_height="38dp"
+        android:layout_width="92dp"
+        android:layout_height="53dp"
         android:background="#FCAE1E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,10 +141,10 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <Button
         android:id="@+id/button19"

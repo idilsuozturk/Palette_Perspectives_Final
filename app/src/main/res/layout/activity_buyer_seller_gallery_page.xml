@@ -80,7 +80,7 @@
     <Button
         android:id="@+id/button26"
         android:layout_width="254dp"
-        android:layout_height="47dp"
+        android:layout_height="63dp"
         android:background="#FCAE1E"
         android:text="Buy Tour"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,20 +93,20 @@
     <Button
         android:id="@+id/button27"
         android:layout_width="254dp"
-        android:layout_height="47dp"
+        android:layout_height="63dp"
         android:background="#FCAE1E"
         android:text="go to artıst's page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <Button
         android:id="@+id/button28"
         android:layout_width="254dp"
-        android:layout_height="47dp"
+        android:layout_height="63dp"
         android:background="#FCAE1E"
         android:text="get notıfıcatıons"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,7 +114,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintVertical_bias="0.778" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -124,8 +124,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.924"
+        app:layout_constraintVertical_bias="0.971"
         app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo" />
+
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="119dp"

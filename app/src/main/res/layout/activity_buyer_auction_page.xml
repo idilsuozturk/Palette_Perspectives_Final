@@ -61,8 +61,8 @@
 
     <EditText
         android:id="@+id/editTextTime3"
-        android:layout_width="151dp"
-        android:layout_height="32dp"
+        android:layout_width="164dp"
+        android:layout_height="51dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -70,17 +70,16 @@
         app:layout_constraintHorizontal_bias="0.811"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.186" />
 
     <ScrollView
-        android:layout_width="310dp"
-        android:layout_height="296dp"
+        android:layout_width="315dp"
+        android:layout_height="270dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547">
+        app:layout_constraintVertical_bias="0.529">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -148,8 +147,8 @@
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="219dp"
-        android:layout_height="28dp"
+        android:layout_width="223dp"
+        android:layout_height="51dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -161,42 +160,42 @@
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView"
-        android:layout_width="220dp"
-        android:layout_height="22dp"
-        android:text="Highest bid"
-        android:textSize="34sp"
+        android:layout_width="226dp"
+        android:layout_height="50dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintHorizontal_bias="0.729"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintVertical_bias="0.78" />
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="235dp"
-        android:layout_height="47dp"
+        android:layout_width="314dp"
+        android:layout_height="54dp"
         android:background="#FCAE1E"
         android:text="Wıthdraw from Auctıon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.933" />
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="197dp"
-        android:layout_height="31dp"
+        android:layout_width="218dp"
+        android:layout_height="59dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.257" />
+
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="119dp"
