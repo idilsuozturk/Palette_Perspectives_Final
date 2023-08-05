@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button buyerButton;
     Button sellerButton;
+    Button adminButton;
     Button areYouNewHere;
 
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         buyerButton = findViewById(R.id.buyer);
         sellerButton = findViewById(R.id.seller);
+        adminButton = findViewById(R.id.admin);
         areYouNewHere = findViewById(R.id.signIn);
 
         buyerButton.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         sellerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
