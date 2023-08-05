@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForBuyer.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForAdmin.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

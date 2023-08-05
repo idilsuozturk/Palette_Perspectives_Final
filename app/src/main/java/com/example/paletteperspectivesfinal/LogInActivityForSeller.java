@@ -25,6 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LogInActivityForSeller extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword;
     Button loginButton;
+    ImageButton backButton;
     FirebaseAuth mAuth;
 
     @Override
@@ -43,16 +44,10 @@ public class LogInActivityForSeller extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
         mAuth = FirebaseAuth.getInstance();
-        editTextEmail = findViewById(R.id.nameInput);
-        editTextPassword = findViewById(R.id.passwordInput);
-        loginButton = findViewById(R.id.loginButton);
-        ImageButton backButton = findViewById(R.id.imageButton3);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        editTextEmail = findViewById(R.id.emailLog);
+        editTextPassword = findViewById(R.id.passwordLog);
+        loginButton = findViewById(R.id.buttonLog);
+        backButton = findViewById(R.id.imageButton3);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +81,14 @@ public class LogInActivityForSeller extends AppCompatActivity {
                                 }
                             }
                         });
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
