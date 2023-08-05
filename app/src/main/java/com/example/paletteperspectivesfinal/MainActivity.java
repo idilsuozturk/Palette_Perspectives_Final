@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         buyerButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForBuyer.class);
                 startActivity(intent);
             }
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         sellerButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
                 startActivity(intent);
             }
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForAdmin.class);
                 startActivity(intent);
             }
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         areYouNewHere.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
                 startActivity(intent);
             }
