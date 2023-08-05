@@ -14,15 +14,21 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class RegistrationActivity extends AppCompatActivity {
@@ -32,6 +38,9 @@ public class RegistrationActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     ImageButton backButton;
+    FirebaseFirestore fireStore;
+    FirebaseUser user;
+    String UId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,17 +55,39 @@ public class RegistrationActivity extends AppCompatActivity {
         buttonReg = findViewById(R.id.buttonsign);
         progressBar = findViewById(R.id.progressign);
         backButton = findViewById(R.id.imageButton3);
+        fireStore = FirebaseFirestore.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        UId = user.getUid();
 
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                String name, surname, email, password;
-                int age;
+                String name, surname, email, password, age;
                 name = String.valueOf(editTextName.getText());
                 surname = String.valueOf(editTextSurname.getText());
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
+                age = String.valueOf(editTextAge.getText());
+                Map<String, Object> user = new HashMap<>();
+                user.put("First name", name);
+                user.put("Last name", surname);
+                user.put("age", age);
+                user.put("ID",UId);
+
+                fireStore.collection("Users")
+                        .add(user)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Toast.makeText(RegistrationActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+                            }
+                        }) .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(RegistrationActivity.this, "Failure", Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)
                         || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
@@ -65,15 +96,15 @@ public class RegistrationActivity extends AppCompatActivity {
                     return;
                 }
 
-                String ageString = String.valueOf(editTextAge.getText());
-                if (TextUtils.isEmpty(ageString)) {
+
+                if (TextUtils.isEmpty(age)) {
                     Toast.makeText(RegistrationActivity.this, "Enter your age", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
 
-                age = Integer.parseInt(ageString);
-                if (age < 18) {
+                int age1 = Integer.valueOf(age);
+                if (age1 < 18) {
                     Toast.makeText(RegistrationActivity.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     return;
