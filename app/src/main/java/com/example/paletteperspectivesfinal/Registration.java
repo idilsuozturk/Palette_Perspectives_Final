@@ -18,17 +18,23 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
+// ... (existing imports)
+
 public class Registration extends AppCompatActivity {
 
-    TextInputEditText editTextEmail, editTextPassword;
+    TextInputEditText editTextName, editTextSurname, editTextAge, editTextEmail, editTextPassword;
     Button buttonReg;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
+        editTextName = findViewById(R.id.namesign);
+        editTextSurname = findViewById(R.id.surnamesign);
+        editTextAge = findViewById(R.id.agesign);
         editTextEmail = findViewById(R.id.emailsign);
         editTextPassword = findViewById(R.id.passwordsign);
         buttonReg = findViewById(R.id.buttonsign);
@@ -38,21 +44,37 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                String email, password;
+                String name, surname, email, password;
+                int age;
+                name = String.valueOf(editTextName.getText());
+                surname = String.valueOf(editTextSurname.getText());
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                if (TextUtils.isEmpty(email)){
-                    Toast.makeText(Registration.this, "Enter Email", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(password)){
-                    Toast.makeText(Registration.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)
+                        || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+                    Toast.makeText(Registration.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
                     return;
                 }
 
+                String ageString = String.valueOf(editTextAge.getText());
+                if (TextUtils.isEmpty(ageString)) {
+                    Toast.makeText(Registration.this, "Enter your age", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    return;
+                }
+
+                age = Integer.parseInt(ageString);
+                if (age < 18) {
+                    Toast.makeText(Registration.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    return;
+                }
+
+                // Register the user with Firebase
                 mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
@@ -62,10 +84,9 @@ public class Registration extends AppCompatActivity {
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    // If sign in fails, display a message to the user.
+                                    // If sign-in fails, display a message to the user.
                                     Toast.makeText(Registration.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
-
                                 }
                             }
                         });
