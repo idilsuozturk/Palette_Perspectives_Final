@@ -1,4 +1,4 @@
-package Classes;
+/*package Classes;
 
 import static com.google.firebase.database.core.operation.OperationSource.Source.User;
 
@@ -107,4 +107,4 @@ public class Buyer extends User{
             }
 
     }
-}
+}*/

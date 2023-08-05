@@ -33,22 +33,32 @@ public class MainSellerActivity extends AppCompatActivity {
     }
     private void openUploadOptionsDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Upload Artwork");
-        builder.setItems(new CharSequence[]{"Hard Copy", "Digital Copy"}, new DialogInterface.OnClickListener() {
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_upload_options, null);
+        builder.setView(dialogView);
+
+        Button hardCopyButton = dialogView.findViewById(R.id.hardCopyButton);
+        Button digitalCopyButton = dialogView.findViewById(R.id.digitalCopyButton);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        hardCopyButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case 0: // Hard Copy
-                        openHardCopyActivity();
-                        break;
-                    case 1: // Digital Copy
-                        openDigitalCopyActivity();
-                        break;
-                }
+            public void onClick(View v) {
+                dialog.dismiss();
+                openHardCopyActivity();
             }
         });
-        builder.show();
+
+        digitalCopyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                openDigitalCopyActivity();
+            }
+        });
     }
+
     private void openHardCopyActivity() {
         Intent intent = new Intent(MainSellerActivity.this, HardCopyActivity.class);
         startActivity(intent);

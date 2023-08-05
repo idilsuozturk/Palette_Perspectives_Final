@@ -1,4 +1,4 @@
-package com.example.paletteperspectivesfinal;
+/*package com.example.paletteperspectivesfinal;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -49,7 +49,6 @@ public class Registration extends AppCompatActivity {
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                            @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(Registration.this, "Account Created",
@@ -66,4 +65,4 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
-}
+}*/

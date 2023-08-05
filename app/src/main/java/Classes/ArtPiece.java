@@ -1,4 +1,4 @@
-package Classes;
+/*package Classes;
 
 
 
@@ -47,4 +47,4 @@ public abstract class ArtPiece {
         this.rank = rank;
     }
 
-}
+}*/

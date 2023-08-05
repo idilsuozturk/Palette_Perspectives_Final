@@ -1,4 +1,4 @@
-package Classes;
+/*package Classes;
 
 public class HardCopyArtPiece extends ArtPiece{
     private String photoUrl;
@@ -12,3 +12,4 @@ public class HardCopyArtPiece extends ArtPiece{
         this.canOffered = canOffered;
     }
 }
+*/
