@@ -1,4 +1,4 @@
-/*package com.example.paletteperspectivesfinal;
+package com.example.paletteperspectivesfinal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -73,4 +73,4 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
-}*/
+}
