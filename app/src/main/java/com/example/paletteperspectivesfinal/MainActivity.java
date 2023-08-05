@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
+                intent.putExtra("rememberme",true);
                 startActivity(intent);
                 finish();
             }
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         areYouNewHere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
+                Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
                 startActivity(intent);
                 finish();
             }

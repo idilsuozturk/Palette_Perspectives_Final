@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SellerProfile extends AppCompatActivity {
 
     FirebaseAuth auth;
-    Button logOutButton;
+    Button buttonLog;
     FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class SellerProfile extends AppCompatActivity {
         setContentView(R.layout.activity_seller_profile);
 
         auth = FirebaseAuth.getInstance();
-        logOutButton = findViewById(R.id.logOutButton);
+        buttonLog = findViewById(R.id.logOutButton);
         user = auth.getCurrentUser();
         if (user == null) {
             Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
@@ -29,14 +29,20 @@ public class SellerProfile extends AppCompatActivity {
             finish();
         }
 
-        logOutButton.setOnClickListener(new View.OnClickListener() {
+        /*buttonLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
+
                 Intent intent = new Intent(getApplicationContext(), LogInActivityForSeller.class);
                 startActivity(intent);
                 finish();
             }
-        });
+        });*/
+    }
+    public void logOut(View view) {
+
+        Intent intent = new Intent(SellerProfile.this, LogInActivityForSeller.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -28,16 +28,9 @@ public class LogInActivityForSeller extends AppCompatActivity {
     ImageButton backButton;
     FirebaseAuth mAuth;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            Intent intent = new Intent(getApplicationContext(), MainSellerActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +41,7 @@ public class LogInActivityForSeller extends AppCompatActivity {
         editTextPassword = findViewById(R.id.passwordLog);
         loginButton = findViewById(R.id.buttonLog);
         backButton = findViewById(R.id.imageButton3);
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
