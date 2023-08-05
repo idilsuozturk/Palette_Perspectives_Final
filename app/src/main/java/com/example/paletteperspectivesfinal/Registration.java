@@ -1,4 +1,4 @@
-package com.example.paletteperspectivesfinal;
+/*package com.example.paletteperspectivesfinal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -54,7 +54,6 @@ public class Registration extends AppCompatActivity {
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                            @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
@@ -74,4 +73,4 @@ public class Registration extends AppCompatActivity {
             }
         });
     }
-}
+}*/

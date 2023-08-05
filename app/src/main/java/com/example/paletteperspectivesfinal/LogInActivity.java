@@ -5,9 +5,14 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+
+import android.widget.ImageButton;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -96,6 +101,14 @@ public class LogInActivity extends AppCompatActivity {
                                 }
                             }
                         });
+            }
+        });
+
+        ImageButton backButton = findViewById(R.id.imageButton3);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

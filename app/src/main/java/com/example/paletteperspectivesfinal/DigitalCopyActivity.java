@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -43,6 +44,14 @@ public class DigitalCopyActivity extends AppCompatActivity {
         });
 
         imageView = findViewById(R.id.imageView6);
+
+        ImageButton backButton = findViewById(R.id.imageButton3);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void openFileChooser() {

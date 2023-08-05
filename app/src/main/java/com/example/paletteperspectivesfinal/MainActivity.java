@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 boolean isSellerLoggedIn = true;
 
                 if (isSellerLoggedIn) {
-                    Intent intent = new Intent(MainActivity.this, MainSellerActivity.class);
+                    Intent intent = new Intent(MainActivity.this, LogInActivity.class);
                     startActivity(intent);
                 } else {
                     // If the user is not logged in, you can navigate them to the login page

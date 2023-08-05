@@ -1,4 +1,4 @@
-package Classes;
+/*package Classes;
 
 import android.net.Uri;
 
@@ -117,4 +117,4 @@ public class Seller extends User{
             gallery = new Gallery();
         }
     }
-}
+}*/
