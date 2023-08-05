@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         Button adminButton = findViewById(R.id.admin);
         Button buyerButton = findViewById(R.id.buyer);
         Button sellerButton = findViewById(R.id.seller);
+        Button areYouNewHere = findViewById(R.id.signIn);
 
         adminButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,15 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, LogInActivity.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        areYouNewHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Registration.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
