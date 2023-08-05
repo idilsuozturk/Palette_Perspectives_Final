@@ -11,5 +11,4 @@ public class HardCopyArtPiece extends ArtPiece{
         this.price = price;
         this.canOffered = canOffered;
     }
-}
-*/
+}*/
