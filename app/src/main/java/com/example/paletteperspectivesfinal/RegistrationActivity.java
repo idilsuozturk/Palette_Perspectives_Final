@@ -46,7 +46,7 @@ public class RegistrationActivity extends AppCompatActivity {
         buttonReg = findViewById(R.id.buttonsign);
         progressBar = findViewById(R.id.progressign);
         backButton = findViewById(R.id.imageButton3);
-        
+
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
