@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 public class MainSellerActivity extends AppCompatActivity {
     @Override
@@ -16,6 +17,9 @@ public class MainSellerActivity extends AppCompatActivity {
 
         Button uploadArtworkButton = findViewById(R.id.button);
         Button removeArtworkButton = findViewById(R.id.button5);
+        Button notificationsButton = findViewById(R.id.button3);
+        Button myGalleryButton = findViewById(R.id.button6);
+        Button accountButton = findViewById(R.id.button7);
 
         uploadArtworkButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +31,29 @@ public class MainSellerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openSellerRemoveArtworkActivity();
+            }
+        });
+
+        notificationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainSellerActivity.this, SellerNotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+        myGalleryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainSellerActivity.this, SellerMyGalleryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        accountButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainSellerActivity.this, SellerProfile.class);
+                startActivity(intent);
             }
         });
 
