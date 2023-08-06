@@ -26,7 +26,7 @@ public class registrationAfterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrationAfter);
+        setContentView(R.layout.activity_registrationafter);
         editTextName = findViewById(R.id.namesign);
         editTextSurname = findViewById(R.id.surnamesign);
         editTextAge = findViewById(R.id.agesign);
