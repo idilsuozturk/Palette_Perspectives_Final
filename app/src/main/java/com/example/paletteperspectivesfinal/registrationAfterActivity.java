@@ -1,5 +1,6 @@
 package com.example.paletteperspectivesfinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -68,6 +69,9 @@ public class registrationAfterActivity extends AppCompatActivity {
                     Toast.makeText(registrationAfterActivity.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
