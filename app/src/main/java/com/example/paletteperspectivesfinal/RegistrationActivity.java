@@ -40,7 +40,6 @@ public class RegistrationActivity extends AppCompatActivity {
     ImageButton backButton;
     FirebaseFirestore fireStore;
     FirebaseUser user;
-    String UId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,18 +56,19 @@ public class RegistrationActivity extends AppCompatActivity {
         backButton = findViewById(R.id.imageButton3);
         fireStore = FirebaseFirestore.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
-        UId = user.getUid();
+
 
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                String name, surname, email, password, age;
+                String name, surname, email, password, age, UId;
                 name = String.valueOf(editTextName.getText());
                 surname = String.valueOf(editTextSurname.getText());
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
                 age = String.valueOf(editTextAge.getText());
+                UId = user.getUid();
                 Map<String, Object> user = new HashMap<>();
                 user.put("First name", name);
                 user.put("Last name", surname);
