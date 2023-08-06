@@ -31,12 +31,15 @@ public class BuyerProfile extends AppCompatActivity {
     FirebaseFirestore fireStore;
     DocumentReference reference;
     TextView name;
-    String fullName;
+    TextView surname;
+    String name1;
+    String surname1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buyer_profile);
         name = findViewById(R.id.textView16);
+        surname = findViewById(R.id.textView18);
         auth = FirebaseAuth.getInstance();
         logOutButton = findViewById(R.id.logOutButton1);
         user = auth.getCurrentUser();
@@ -50,7 +53,21 @@ public class BuyerProfile extends AppCompatActivity {
             finish();
         }
 
-        profileCreate();
+        reference = fireStore.collection("Users").document(user.getUid());
+        reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        name1 = document.getString("FirstName");
+                        surname1 = document.getString("LastName");
+                        name.setText(name1);
+                        surname.setText(surname1);
+                    }
+                }
+            }
+        });
 
         logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,22 +94,6 @@ public class BuyerProfile extends AppCompatActivity {
                 // Navigate to BuyerNotification activity
                 Intent intent = new Intent(BuyerProfile.this, BuyerNotificationActivity.class);
                 startActivity(intent);
-            }
-        });
-    }
-
-    public  void profileCreate() {
-        reference = fireStore.collection("Users").document(user.getUid());
-        reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        fullName = document.getData().get("First name").toString();
-                        name.setText(fullName);
-                    }
-                }
             }
         });
     }

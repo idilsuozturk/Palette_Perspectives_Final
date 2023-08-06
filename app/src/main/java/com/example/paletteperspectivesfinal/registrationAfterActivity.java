@@ -47,8 +47,8 @@ public class registrationAfterActivity extends AppCompatActivity {
                 CollectionReference Users = fireStore.collection("Users");
 
                 Map<String, Object> user = new HashMap<>();
-                user.put("First name", name);
-                user.put("Last name", surname);
+                user.put("FirstName", name);
+                user.put("LastName", surname);
                 user.put("age", age);
                 user.put("ID",UId);
                 Users.document(UId).set(user);
