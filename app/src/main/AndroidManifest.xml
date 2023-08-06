@@ -40,6 +40,14 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".BuyerProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".RegistrationActivity"
             android:exported="false">
@@ -64,6 +72,14 @@
         </activity>
 
         <activity
+            android:name=".MainAdminActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
             android:name=".HardCopyActivity"
             android:exported="false">
             <meta-data
@@ -73,6 +89,22 @@
 
         <activity
             android:name=".MainBuyerActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".BuyerBestSellersActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".BuyerFavouritesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
