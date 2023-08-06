@@ -21,6 +21,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -69,25 +70,14 @@ public class RegistrationActivity extends AppCompatActivity {
                 password = String.valueOf(editTextPassword.getText());
                 age = String.valueOf(editTextAge.getText());
                 UId = user.getUid();
+                CollectionReference Users = fireStore.collection("Users");
+
                 Map<String, Object> user = new HashMap<>();
                 user.put("First name", name);
                 user.put("Last name", surname);
                 user.put("age", age);
                 user.put("ID",UId);
-
-                fireStore.collection("Users")
-                        .add(user)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                            @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                Toast.makeText(RegistrationActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                            }
-                        }) .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(RegistrationActivity.this, "Failure", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                Users.document(UId).set(user);
 
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)
                         || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
