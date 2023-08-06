@@ -34,71 +34,36 @@ import java.util.Map;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    TextInputEditText editTextName, editTextSurname, editTextAge, editTextEmail, editTextPassword;
+    TextInputEditText editTextEmail, editTextPassword;
     Button buttonReg;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     ImageButton backButton;
     FirebaseFirestore fireStore;
-    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         mAuth = FirebaseAuth.getInstance();
-        editTextName = findViewById(R.id.namesign);
-        editTextSurname = findViewById(R.id.surnamesign);
-        editTextAge = findViewById(R.id.agesign);
+
         editTextEmail = findViewById(R.id.emailsign);
         editTextPassword = findViewById(R.id.passwordsign);
         buttonReg = findViewById(R.id.buttonsign);
         progressBar = findViewById(R.id.progressign);
         backButton = findViewById(R.id.imageButton3);
         fireStore = FirebaseFirestore.getInstance();
-        user = FirebaseAuth.getInstance().getCurrentUser();
 
 
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
-                String name, surname, email, password, age, UId;
-                name = String.valueOf(editTextName.getText());
-                surname = String.valueOf(editTextSurname.getText());
+                String email, password;
+
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
-                age = String.valueOf(editTextAge.getText());
-                UId = user.getUid();
-                CollectionReference Users = fireStore.collection("Users");
 
-                Map<String, Object> user = new HashMap<>();
-                user.put("First name", name);
-                user.put("Last name", surname);
-                user.put("age", age);
-                user.put("ID",UId);
-                Users.document(UId).set(user);
-
-                if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)
-                        || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-                    Toast.makeText(RegistrationActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE);
-                    return;
-                }
-
-
-                if (TextUtils.isEmpty(age)) {
-                    Toast.makeText(RegistrationActivity.this, "Enter your age", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE);
-                    return;
-                }
-
-                int age1 = Integer.valueOf(age);
-                if (age1 < 18) {
-                    Toast.makeText(RegistrationActivity.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE);
-                    return;
-                }
 
                 // Register the user with Firebase
                 mAuth.createUserWithEmailAndPassword(email, password)
