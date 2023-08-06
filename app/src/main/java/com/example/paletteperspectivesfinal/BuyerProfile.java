@@ -69,6 +69,16 @@ public class BuyerProfile extends AppCompatActivity {
                 finish();
             }
         });
+
+        ImageButton notificationButton = findViewById(R.id.imageButton);
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to BuyerNotification activity
+                Intent intent = new Intent(BuyerProfile.this, BuyerNotificationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public  void profileCreate() {
