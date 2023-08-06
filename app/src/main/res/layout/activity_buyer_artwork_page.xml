@@ -8,7 +8,9 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background" />
+        android:background="@drawable/background"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -101,12 +103,13 @@
         android:layout_height="49dp"
         android:ems="10"
         android:inputType="number"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809" />
+        app:layout_constraintVertical_bias="0.821" />
 
     <TextView
         android:id="@+id/textView36"

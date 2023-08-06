@@ -194,9 +194,8 @@
         app:constraint_referenced_ids="textView4" />
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/group4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="2dp"
+        android:layout_height="5dp"
         app:constraint_referenced_ids="button4" />
 
     <androidx.constraintlayout.widget.Group

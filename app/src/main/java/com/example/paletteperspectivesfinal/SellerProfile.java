@@ -16,6 +16,7 @@ public class SellerProfile extends AppCompatActivity {
     FirebaseAuth auth;
     Button buttonLog;
     FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
