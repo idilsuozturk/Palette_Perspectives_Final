@@ -55,7 +55,7 @@ public class SellerProfile extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         forHello = "Hello!\n" + document.getString("FirstName");
-                        fullName = document.getString("FirstName") + " " + document.getString("LastName");
+                        fullName = document.getString("FirstName") + "\n" + document.getString("LastName");
                         name.setText(fullName);
                         hello.setText(forHello);
                     }

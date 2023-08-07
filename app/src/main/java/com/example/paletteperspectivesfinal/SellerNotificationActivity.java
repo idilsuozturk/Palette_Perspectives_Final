@@ -20,4 +20,5 @@ public class SellerNotificationActivity extends AppCompatActivity {
         });
     }
 
+
 }
