@@ -1,6 +1,4 @@
-/*package Classes;
-
-
+/* package Classes;
 
 public abstract class ArtPiece {
     private static int count = 1;
@@ -16,9 +14,7 @@ public abstract class ArtPiece {
         count++;
     }
 
-
-
-    //GETTERS AND SETTERS
+    // Getters and Setters
     public int getArtPieceId() {
         return id;
     }
@@ -46,5 +42,5 @@ public abstract class ArtPiece {
     public void setRank(double rank) {
         this.rank = rank;
     }
+} */
 
-}*/
