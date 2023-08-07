@@ -9,7 +9,7 @@ public class AuctionArtPiece extends HardCopyArtPiece {
     private boolean auctionOver;
 
     public AuctionArtPiece(String title, Seller artist, double startingPrice, boolean canOffered, Date startingDate) {
-        super(title, artist, -1, canOffered);
+        super(title, artist, -1, canOffered); // This is need to be fixed, because price will be -1. I mean it must be implemented
         this.startingPrice = startingPrice;
         this.startingDate = startingDate;
         this.highestOffer = startingPrice;
