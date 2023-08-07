@@ -1,38 +1,60 @@
 package Classes;
 
-public abstract class User {
-    private String name;
-    private int id;
-    private String password;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class User implements Parcelable {
+    private String firstName, lastName;
+    private String  id;
     private int age;
 
     // Constructor
-    public User(String name, int id, String password, int age) {
-        this.name = name;
+    public User(String name, String id, String password, int age) {
+        this.firstName = name;
         this.id = id;
-        this.password = password;
         this.age = age;
     }
 
+    protected User(Parcel in) {
+        id = in.readString();
+        firstName = in.readString();
+        lastName = in.readString();
+        // Read other fields
+    }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
     // Getters and setters for attributes
     public String getName() {
-        return name;
+        return firstName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.firstName = name;
+    }
+    public String getLastName() {
+        return lastName;
     }
 
-    public int getId() {
+    public void setLastName(String name) {
+        this.lastName = name;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public int getAge() {
@@ -43,12 +65,17 @@ public abstract class User {
         this.age = age;
     }
 
-
     public void deleteAccount() {
         //TO-DO delete account from database
     }
-
-    public void changePassword(String password) {
-        this.password = password;
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(firstName);
+        // Write other fields
     }
 }
