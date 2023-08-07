@@ -43,10 +43,12 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView nameTextView;
+        private TextView detailsTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
+            detailsTextView = itemView.findViewById(R.id.detailsTextView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -59,7 +61,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
         }
 
         public void bind(User user) {
-            nameTextView.setText(user.getName());
+
+            nameTextView.setText(user.getFirstName());
+            detailsTextView.setText(user.getLastName());
         }
     }
 

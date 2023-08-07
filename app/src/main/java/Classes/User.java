@@ -4,21 +4,21 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class User implements Parcelable {
-    private String firstName, lastName;
-    private String  id;
-    private int age;
+    private String FirstName, LastName;
+    private String  ID;
+    private String age;
+    private  String numberOfWorks;
 
     // Constructor
-    public User(String name, String id, String password, int age) {
-        this.firstName = name;
-        this.id = id;
-        this.age = age;
+
+    public User() {
+        // Default constructor is required for Firestore deserialization
     }
 
     protected User(Parcel in) {
-        id = in.readString();
-        firstName = in.readString();
-        lastName = in.readString();
+        ID = in.readString();
+        FirstName = in.readString();
+        LastName = in.readString();
         // Read other fields
     }
 
@@ -34,34 +34,34 @@ public class User implements Parcelable {
         }
     };
     // Getters and setters for attributes
-    public String getName() {
-        return firstName;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setName(String name) {
-        this.firstName = name;
+    public void setFirstName(String firstName) {
+        this.FirstName = firstName;
     }
     public String getLastName() {
-        return lastName;
+        return LastName;
     }
 
-    public void setLastName(String name) {
-        this.lastName = name;
+    public void setLastName(String firstName) {
+        this.LastName = firstName;
     }
 
     public String getId() {
-        return id;
+        return ID;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.ID = id;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -74,8 +74,9 @@ public class User implements Parcelable {
     }
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(firstName);
+        dest.writeString(ID);
+        dest.writeString(FirstName);
+        dest.writeString(LastName);
         // Write other fields
     }
 }
