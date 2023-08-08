@@ -5,8 +5,8 @@ whether an offer is possible. It also includes a few methods for changing price,
 etc. (setters and getters). Moreover, there will be a method for offering new price. This class
 will be the superclass of the Digital Art Piece and Hardcopy Art Piece classes.
  */
-
-/* package Classes;
+/*
+package Classes;
 
 public abstract class ArtPiece {
     private static int count = 1;
@@ -50,5 +50,6 @@ public abstract class ArtPiece {
     public void setRank(double rank) {
         this.rank = rank;
     }
+
 } */
 
