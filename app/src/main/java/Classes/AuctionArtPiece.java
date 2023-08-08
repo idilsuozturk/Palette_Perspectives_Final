@@ -1,10 +1,19 @@
+/*
+    The Auction Art Piece class will use most attributes of the superclass, but no need
+for the price attribute. Therefore, we will add starting price rather than price attribute and also
+add starting date. In addition to that, we will add methods for getting the highest offer, and
+controlling whether the auction is over.
+ */
+
 /* package Classes;
 
 import java.util.Date;
 
 public class AuctionArtPiece extends HardCopyArtPiece {
+    // necessary instances
     private double startingPrice;
     private Date startingDate;
+    private Date endDate;
     private double highestOffer;
     private boolean auctionOver;
 
@@ -14,10 +23,13 @@ public class AuctionArtPiece extends HardCopyArtPiece {
         this.startingDate = startingDate;
         this.highestOffer = startingPrice;
         this.auctionOver = false;
+
+        long oneDayInMillis = 24 * 60 * 60 * 1000; // One day in milliseconds
+        long endDateInMillis = startingDate.getTime() + oneDayInMillis;
+        this.endDate = new Date(endDateInMillis);
     }
 
     // Getters and Setters for the new attributes
-
     public double getStartingPrice() {
         return startingPrice;
     }
@@ -34,10 +46,10 @@ public class AuctionArtPiece extends HardCopyArtPiece {
         this.startingPrice = startingPrice;
     }
 
-    // Other methods for controlling the auction
 
+    // Other methods for controlling the auction
     public boolean isAuctionOver() {
-        return auctionOver;
+        return auctionOver || new Date().after(endDate);
     }
 
     public void makeOffer(double offer) {
@@ -49,5 +61,7 @@ public class AuctionArtPiece extends HardCopyArtPiece {
     public void endAuction() {
         auctionOver = true;
     }
+
+
 } */
 

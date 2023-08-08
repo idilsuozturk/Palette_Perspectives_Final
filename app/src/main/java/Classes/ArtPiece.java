@@ -1,3 +1,11 @@
+/*
+    In this abstract class, we will save attributes of an art piece like the
+price of an art piece, name of the art and artist, owner of the art piece, photo availability, and
+whether an offer is possible. It also includes a few methods for changing price, name, owner,
+etc. (setters and getters). Moreover, there will be a method for offering new price. This class
+will be the superclass of the Digital Art Piece and Hardcopy Art Piece classes.
+ */
+
 /* package Classes;
 
 public abstract class ArtPiece {
