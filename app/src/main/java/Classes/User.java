@@ -16,6 +16,7 @@ public class User implements Parcelable {
         ID = in.readString();
         FirstName = in.readString();
         LastName = in.readString();
+        profilePictureUrl = in.readString();
         // Read other fields
     }
 
@@ -81,6 +82,7 @@ public class User implements Parcelable {
         dest.writeString(ID);
         dest.writeString(FirstName);
         dest.writeString(LastName);
+        dest.writeString(profilePictureUrl);
         // Write other fields
     }
 }
