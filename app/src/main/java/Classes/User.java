@@ -4,10 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class User implements Parcelable {
-    private String FirstName, LastName;
-    private String  ID;
-    private String age;
-    private  String numberOfWorks;
+    private String FirstName, LastName, ID, age, numberOfWorks, profilePictureUrl;
 
     // Constructor
 
@@ -63,6 +60,13 @@ public class User implements Parcelable {
 
     public void setAge(String age) {
         this.age = age;
+    }
+    public String getProfilePictureUrl() {
+        return profilePictureUrl;
+    }
+
+    public void setProfilePictureUrl(String profilePictureUrl) {
+        this.profilePictureUrl = profilePictureUrl;
     }
 
     public void deleteAccount() {

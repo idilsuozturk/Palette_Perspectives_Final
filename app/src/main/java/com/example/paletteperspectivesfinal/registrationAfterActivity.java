@@ -51,6 +51,7 @@ public class registrationAfterActivity extends AppCompatActivity {
                 user.put("LastName", surname);
                 user.put("age", age);
                 user.put("ID",UId);
+                user.put("profilePictureUrl", "ProfilePicture/image.png");
                 Users.document(UId).set(user);
 
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)) {
