@@ -1,54 +1,82 @@
 package Classes;
 
-public abstract class User {
-    private String name;
-    private int id;
-    private String password;
-    private int age;
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class User implements Parcelable {
+    private String FirstName, LastName;
+    private String  ID;
+    private String age;
+    private  String numberOfWorks;
 
     // Constructor
-    public User(String name, int id, String password, int age) {
-        this.name = name;
-        this.id = id;
-        this.password = password;
-        this.age = age;
+
+    public User() {
+        // Default constructor is required for Firestore deserialization
     }
 
+    protected User(Parcel in) {
+        ID = in.readString();
+        FirstName = in.readString();
+        LastName = in.readString();
+        // Read other fields
+    }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
     // Getters and setters for attributes
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.FirstName = firstName;
+    }
+    public String getLastName() {
+        return LastName;
     }
 
-    public int getId() {
-        return id;
+    public void setLastName(String firstName) {
+        this.LastName = firstName;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getId() {
+        return ID;
     }
 
-    public String getPassword() {
-        return password;
+    public void setId(String id) {
+        this.ID = id;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
-
 
     public void deleteAccount() {
         //TO-DO delete account from database
     }
-
-    public void changePassword(String password) {
-        this.password = password;
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(ID);
+        dest.writeString(FirstName);
+        dest.writeString(LastName);
+        // Write other fields
     }
 }
