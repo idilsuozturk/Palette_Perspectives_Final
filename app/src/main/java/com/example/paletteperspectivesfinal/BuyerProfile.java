@@ -67,6 +67,7 @@ public class BuyerProfile extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+        changeUrl();
 
         reference = fireStore.collection("Users").document(user.getUid());
         reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -135,41 +136,6 @@ public class BuyerProfile extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
             }
         });
-        reference = fireStore.collection("Users").document(user.getUid());
-        reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        profilePictureUrl = document.getString("profilePictureUrl");
-                        int start = profilePictureUrl.indexOf("Profile");
-                        int end = profilePictureUrl.indexOf("?");
-                        profilePictureUrl = profilePictureUrl.substring(start, end);
-                        String newProfilePictureUrl = profilePictureUrl.replace('%', '/');
-                        fireStore.collection("Users")
-                                .document("user_id" /* Replace with actual user ID */)
-                                .update("profilePictureUrl", newProfilePictureUrl)
-                                .addOnSuccessListener(aVoid -> {
-                                    StorageReference defaultImageRef = storageRef.child(newProfilePictureUrl);
-                                    defaultImageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                        @Override
-                                        public void onSuccess(Uri uri) {
-                                            // Load the default profile image into profileImageView
-                                            Glide.with(BuyerProfile.this)
-                                                    .load(uri)
-                                                    .into(profileImageView);
-                                        }
-                                    });
-                                })
-                                .addOnFailureListener(e -> {
-                                    // Profile picture URL update failed
-                                });
-
-                    }
-                }
-            }
-        });
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -209,5 +175,46 @@ public class BuyerProfile extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public  void  changeUrl() {
+        reference = fireStore.collection("Users").document(user.getUid());
+        reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        profilePictureUrl = document.getString("profilePictureUrl");
+                        if(profilePictureUrl.indexOf('?') > 0) {
+                            int start = profilePictureUrl.indexOf("Profile");
+                            int end = profilePictureUrl.indexOf("?");
+                            String profilePictureUrl1 = profilePictureUrl.substring(start, end);
+                            String newProfilePictureUrl = profilePictureUrl1.replace("%2F", "/");
+                            fireStore.collection("Users")
+                                    .document(user.getUid() )
+                                    .update("profilePictureUrl", newProfilePictureUrl)
+                                    .addOnSuccessListener(aVoid -> {
+                                        StorageReference defaultImageRef = storageRef.child(newProfilePictureUrl);
+                                        defaultImageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                            @Override
+                                            public void onSuccess(Uri uri) {
+                                                // Load the default profile image into profileImageView
+                                                Glide.with(BuyerProfile.this)
+                                                        .load(uri)
+                                                        .into(profileImageView);
+                                            }
+                                        });
+                                    })
+                                    .addOnFailureListener(e -> {
+                                        // Profile picture URL update failed
+                                    });
+
+                        }
+
+                    }
+                }
+            }
+        });
     }
 }
