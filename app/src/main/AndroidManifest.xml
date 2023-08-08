@@ -160,8 +160,6 @@
         </activity>
 
 
-        <!-- End of the new activity tags -->
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -99,10 +99,11 @@
         android:id="@+id/imageView17"
         android:layout_width="119dp"
         android:layout_height="66dp"
-        android:layout_marginTop="648dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/white_and_black_simple_photography_initials_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
