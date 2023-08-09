@@ -110,7 +110,6 @@ public class DigitalCopyActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 uploadImage();
-                changeUrl();
             }
         });
 
@@ -135,7 +134,11 @@ public class DigitalCopyActivity extends AppCompatActivity {
                     .addOnSuccessListener(taskSnapshot -> {
                         imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
                             String imageUrl = uri.toString();
-                            DigitalArtPiece artPiece = new DigitalArtPiece(userId, imageUrl, price, canBid);
+                            int start = imageUrl.indexOf("images");
+                            int end = imageUrl.indexOf("?");
+                            String imageUrl1 = imageUrl.substring(start, end);
+                            String newImageUrl = imageUrl1.replace("%2F", "/");
+                            DigitalArtPiece artPiece = new DigitalArtPiece(userId, newImageUrl, price, canBid);
                             db.collection("Users").document(userId).collection("DigitalCopy").document(imageId).set(artPiece);
                         });
                     })
@@ -166,35 +169,5 @@ public class DigitalCopyActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-    }
-    public  void  changeUrl() {
-        reference = db.collection("Users").document(mAuth.getCurrentUser().getUid()).collection("DigitalCopy").document(imageId);
-        reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        String imageUrl = document.getString("imageUrl");
-                        if(imageUrl.indexOf('?') > 0) {
-                            int start = imageUrl.indexOf("images");
-                            int end = imageUrl.indexOf("?");
-                            String imageUrl1 = imageUrl.substring(start, end);
-                            String newImageUrl = imageUrl1.replace("%2F", "/");
-                            db.collection("Users")
-                                    .document(mAuth.getCurrentUser().getUid())
-                                    .collection("DigitalCopy")
-                                    .document(imageId)
-                                    .update("imageUrl", newImageUrl)
-                                    .addOnSuccessListener(aVoid -> {
-                                    })
-                                    .addOnFailureListener(e -> {
-                                        // Profile picture URL update failed
-                                    });
-                        }
-                    }
-                }
-            }
-        });
     }
 }
