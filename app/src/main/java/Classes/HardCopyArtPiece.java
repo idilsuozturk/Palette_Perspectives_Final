@@ -4,34 +4,61 @@ be the super class of the Auction Art Piece class. Moreover, we implement a new 
 start an auction that creates a regular auction process like in real life.
  */
 
-/*
+
 package Classes;
 
 import java.util.HashMap;
 
-public class HardCopyArtPiece extends ArtPiece implements Offerable {
-    private String photoUrl;
-    private int price;
-    private boolean canOffered;
-    private HashMap<User, Integer> offers;
+public class HardCopyArtPiece  {
 
-    public HardCopyArtPiece(String title, Seller artist, int price, boolean canOffered) {
-        super(title, artist);
+    private String userId;
+    private String imageUrl;
+    private String price;
+    private boolean canBid;
+
+    public HardCopyArtPiece(String userId, String imageUrl, String price, boolean canBid) {
+        this.userId = userId;
+        this.imageUrl = imageUrl;
         this.price = price;
-        this.canOffered = canOffered;
-        this.offers = new HashMap<User, Integer>();
-
+        this.canBid = canBid;
+    }
+    public HardCopyArtPiece() {
+        // Default constructor is needed for Firestore deserialization
     }
 
-    public String getPhotoUrl() {
-        return photoUrl;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    @Override
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public boolean isCanBid() {
+        return canBid;
+    }
+
+    public void setCanBid(boolean canBid) {
+        this.canBid = canBid;
+    }
+
+    /*@Override
     public void addOffer(User user, int offer) {
         if (this.canOffered) {
             offers.put(user, offer);
@@ -43,6 +70,6 @@ public class HardCopyArtPiece extends ArtPiece implements Offerable {
         if (this.canOffered) {
             offers.remove(user);
         }
-    }
+    }*/
 
-} */
+}

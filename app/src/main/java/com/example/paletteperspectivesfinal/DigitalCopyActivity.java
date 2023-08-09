@@ -59,11 +59,8 @@ public class DigitalCopyActivity extends AppCompatActivity {
     Button uploadButton;
     FloatingActionButton galleryButton;
     ImageFilterView imageFilterView;
-
     Uri selectedImageUri;
-
     ImageButton backButton;
-    String imageId;
     String hello;
 
     @Override
@@ -83,7 +80,6 @@ public class DigitalCopyActivity extends AppCompatActivity {
         galleryButton = findViewById(R.id.floatingActionButton2);
         imageFilterView = findViewById(R.id.imageFilterView);
         forHello = findViewById(R.id.textView6);
-        imageId = UUID.randomUUID().toString();
 
         reference = db.collection("Users").document(mAuth.getCurrentUser().getUid());
         reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -126,6 +122,7 @@ public class DigitalCopyActivity extends AppCompatActivity {
             String userId = mAuth.getCurrentUser().getUid();
             String price = priceEditText.getText().toString();
             boolean canBid = bidSwitch.isChecked();
+            String imageId = UUID.randomUUID().toString();
             String imageFileName = userId + "_" + imageId;
 
             StorageReference imageRef = storageRef.child("images/" + imageFileName);
