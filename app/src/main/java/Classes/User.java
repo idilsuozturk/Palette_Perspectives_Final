@@ -43,8 +43,8 @@ public class User implements Parcelable {
         return LastName;
     }
 
-    public void setLastName(String firstName) {
-        this.LastName = firstName;
+    public void setLastName(String lastName) {
+        this.LastName = lastName;
     }
 
     public String getId() {
