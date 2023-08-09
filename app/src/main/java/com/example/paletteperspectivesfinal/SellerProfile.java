@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,10 +28,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class SellerProfile extends AppCompatActivity {
+import Classes.ImageAdapter;
+
+public class SellerProfile extends AppCompatActivity implements ImageAdapter.OnItemClickListener{
 
     FirebaseAuth auth;
     FirebaseFirestore fireStore;
@@ -39,6 +45,9 @@ public class SellerProfile extends AppCompatActivity {
     Button buttonLog;
     Button changeImageButton;
     ImageView profileImageView;
+    RecyclerView recyclerView;
+    ImageAdapter imageAdapter;
+    List<String> imageUrls;
     FirebaseUser user;
     TextView name;
     String fullName;
@@ -61,6 +70,48 @@ public class SellerProfile extends AppCompatActivity {
         changeImageButton = findViewById(R.id.button36);
         storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
+        recyclerView = findViewById(R.id.recyclerView2);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        imageUrls = new ArrayList<>();
+        imageAdapter = new ImageAdapter(imageUrls, this);
+        recyclerView.setAdapter(imageAdapter);
+
+        fireStore.collection("Users")
+                .document(auth.getCurrentUser().getUid())
+                .collection("DigitalCopy")
+                .get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    imageUrls.clear(); // Clear existing URLs
+                    for (DocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                        String imageUrl = documentSnapshot.getString("imageUrl");
+                        if (imageUrl != null) {
+                            imageUrls.add(imageUrl);
+                        }
+                    }
+                    fireStore.collection("Users")
+                            .document(auth.getCurrentUser().getUid())
+                            .collection("HardCopy") // Replace with the name of your other collection
+                            .get()
+                            .addOnSuccessListener(otherQueryDocumentSnapshots -> {
+                                for (DocumentSnapshot documentSnapshot : otherQueryDocumentSnapshots) {
+                                    String imageUrl = documentSnapshot.getString("imageUrl");
+                                    if (imageUrl != null) {
+                                        imageUrls.add(imageUrl);
+                                    }
+                                }
+                                imageAdapter.notifyDataSetChanged(); // Notify adapter of data change
+                            })
+                            .addOnFailureListener(e -> {
+                                // Handle the failure to fetch images from the second collection
+                            });
+                })
+                .addOnFailureListener(e -> {
+                    // Handle the failure to fetch images
+                });
+        imageAdapter.setOnItemClickListener(this);
+
 
         if (user == null) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
@@ -204,5 +255,12 @@ public class SellerProfile extends AppCompatActivity {
                 }
             }
         });
+    }
+    @Override
+    public void onItemClick(int position) {
+        String imageUrl = imageUrls.get(position);
+        Intent intent = new Intent(this, SellerShowArtPieceActivity.class);
+        intent.putExtra("imageUrl", imageUrl);
+        startActivity(intent);
     }
 }

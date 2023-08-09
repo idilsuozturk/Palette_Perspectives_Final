@@ -143,14 +143,6 @@
         </activity>
 
         <activity
-            android:name=".SellerRemoveArtworkActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-        <activity
             android:name=".SellerNotificationActivity"
             android:exported="false">
             <meta-data
@@ -165,7 +157,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
+        <activity
+            android:name=".SellerShowArtPieceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
         <activity
             android:name=".MainActivity"
