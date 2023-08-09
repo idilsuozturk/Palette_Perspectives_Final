@@ -6,21 +6,61 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class HardCopyActivity extends AppCompatActivity {
 
-    private static final int PICK_IMAGE_PDF_REQUEST = 1;
+    FirebaseAuth mAuth;
+    FirebaseFirestore db;
+    FirebaseStorage storage;
+    StorageReference storageRef;
+    DocumentReference reference;
+    Button auctionButton;
+    ImageButton backButton;
+    TextView forHello;
+    String hello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_upload_hardcopy);
 
-        Button auctionButton = findViewById(R.id.button4);
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        storage = FirebaseStorage.getInstance();
+        storageRef = storage.getReference();
+
+        forHello = findViewById(R.id.textView3);
+        auctionButton = findViewById(R.id.button4);
+        backButton = findViewById(R.id.imageButton3);
+
+        reference = db.collection("Users").document(mAuth.getCurrentUser().getUid());
+        reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        hello = "Hello!\n" + document.getString("FirstName");
+                        forHello.setText(hello);
+                    }
+                }
+            }
+        });
 
         auctionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,37 +69,13 @@ public class HardCopyActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        FloatingActionButton fabUpload = findViewById(R.id.floatingActionButton2);
-        fabUpload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFileChooser();
-            }
-        });
 
-        ImageButton backButton = findViewById(R.id.imageButton3);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-    }
-
-    private void openFileChooser() {
-        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("application/pdf");
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        startActivityForResult(Intent.createChooser(intent, "Select File"), PICK_IMAGE_PDF_REQUEST);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == PICK_IMAGE_PDF_REQUEST && resultCode == Activity.RESULT_OK && data != null) {
-            Uri fileUri = data.getData();
-        }
     }
 }
 

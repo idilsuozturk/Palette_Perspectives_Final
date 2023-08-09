@@ -4,26 +4,60 @@ addition, we add an instance blurred that says whether the owner blurs the art p
 we implement a new method that makes the art piece blurred or removes the blur of the art
 piece.
  */
-/*
+
 package Classes;
 
 import java.util.HashMap;
 
-public class DigitalArtPiece extends ArtPiece implements Offerable {
-    private boolean blurred;
-    private boolean canOffered;
-    private HashMap<User, Integer> offers;
+public class DigitalArtPiece  {
+    private String userId;
+    private String imageUrl;
+    private String price;
+    private boolean canBid;
 
-    public DigitalArtPiece(String title, Seller artist, boolean canOffered) {
-        super(title, artist);
-        this.canOffered = canOffered;
-        // By default, the art piece is not blurred
-        this.blurred = false;
-        this.offers = new HashMap<User, Integer>();
+    public DigitalArtPiece(String userId, String imageUrl, String price, boolean canBid) {
+        this.userId = userId;
+        this.imageUrl = imageUrl;
+        this.price = price;
+        this.canBid = canBid;
+    }
+    public DigitalArtPiece() {
+        // Default constructor is needed for Firestore deserialization
+    }
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public boolean isCanBid() {
+        return canBid;
+    }
+
+    public void setCanBid(boolean canBid) {
+        this.canBid = canBid;
     }
 
     // Getter and Setter for the 'blurred' attribute
-    public boolean isBlurred() {
+    /*public boolean isBlurred() {
         return blurred;
     }
 
@@ -47,7 +81,7 @@ public class DigitalArtPiece extends ArtPiece implements Offerable {
         if (this.canOffered) {
             offers.remove(user);
         }
-    }
+    }*/
 
-} */
+}
 

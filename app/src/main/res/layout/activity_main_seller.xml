@@ -23,16 +23,6 @@
         app:layout_constraintVertical_bias="0.157"
         app:srcCompat="@drawable/img_7922" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="188dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="9dp"
-        android:background="#FCAE1E"
-        android:text="Delete Artwork"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
         android:id="@+id/button3"
@@ -43,7 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.04000002" />
 
     <Button

@@ -16,7 +16,6 @@ public class MainSellerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_seller);
 
         Button uploadArtworkButton = findViewById(R.id.button);
-        Button removeArtworkButton = findViewById(R.id.button5);
         Button notificationsButton = findViewById(R.id.button3);
         Button myGalleryButton = findViewById(R.id.button6);
         Button accountButton = findViewById(R.id.button7);
@@ -25,12 +24,6 @@ public class MainSellerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openUploadOptionsDialog();
-            }
-        });
-        removeArtworkButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSellerRemoveArtworkActivity();
             }
         });
 
