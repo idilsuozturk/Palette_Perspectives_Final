@@ -42,7 +42,7 @@
         </activity>
 
         <activity
-            android:name=".registrationAfterActivity"
+            android:name=".RegistrationAfterActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

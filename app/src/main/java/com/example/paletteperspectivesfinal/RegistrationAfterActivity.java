@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class registrationAfterActivity extends AppCompatActivity {
+public class RegistrationAfterActivity extends AppCompatActivity {
 
     TextInputEditText editTextName, editTextSurname, editTextAge;
     Button button1;
@@ -55,19 +55,19 @@ public class registrationAfterActivity extends AppCompatActivity {
                 Users.document(UId).set(user);
 
                 if (TextUtils.isEmpty(name) || TextUtils.isEmpty(surname)) {
-                    Toast.makeText(registrationAfterActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationAfterActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
 
                 if (TextUtils.isEmpty(age)) {
-                    Toast.makeText(registrationAfterActivity.this, "Enter your age", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationAfterActivity.this, "Enter your age", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 int age1 = Integer.valueOf(age);
                 if (age1 < 18) {
-                    Toast.makeText(registrationAfterActivity.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistrationAfterActivity.this, "You must be at least 18 years old to register", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
