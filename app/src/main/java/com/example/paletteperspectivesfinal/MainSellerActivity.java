@@ -88,10 +88,4 @@ public class MainSellerActivity extends AppCompatActivity {
         Intent intent = new Intent(MainSellerActivity.this, DigitalCopyActivity.class);
         startActivity(intent);
     }
-    private void openSellerRemoveArtworkActivity() {
-        Intent intent = new Intent(MainSellerActivity.this, SellerRemoveArtworkActivity.class);
-        startActivity(intent);
-    }
-
-
 }

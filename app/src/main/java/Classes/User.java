@@ -3,8 +3,11 @@ package Classes;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.List;
+
 public class User implements Parcelable {
     private String FirstName, LastName, ID, age, numberOfWorks, profilePictureUrl;
+    private List<String> artworkImageUrls;
 
     // Constructor
 
@@ -17,6 +20,7 @@ public class User implements Parcelable {
         FirstName = in.readString();
         LastName = in.readString();
         profilePictureUrl = in.readString();
+        artworkImageUrls = in.createStringArrayList();
         // Read other fields
     }
 
@@ -69,6 +73,13 @@ public class User implements Parcelable {
     public void setProfilePictureUrl(String profilePictureUrl) {
         this.profilePictureUrl = profilePictureUrl;
     }
+    public List<String> getArtworkImageUrls() {
+        return artworkImageUrls;
+    }
+
+    public void setArtworkImageUrls(List<String> artworkImageUrls) {
+        this.artworkImageUrls = artworkImageUrls;
+    }
 
     public void deleteAccount() {
         //TO-DO delete account from database
@@ -83,6 +94,7 @@ public class User implements Parcelable {
         dest.writeString(FirstName);
         dest.writeString(LastName);
         dest.writeString(profilePictureUrl);
+        dest.writeStringList(artworkImageUrls);
         // Write other fields
     }
 }

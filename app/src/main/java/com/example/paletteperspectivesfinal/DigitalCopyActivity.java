@@ -62,6 +62,7 @@ public class DigitalCopyActivity extends AppCompatActivity {
     Uri selectedImageUri;
     ImageButton backButton;
     String hello;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +136,20 @@ public class DigitalCopyActivity extends AppCompatActivity {
                             int end = imageUrl.indexOf("?");
                             String imageUrl1 = imageUrl.substring(start, end);
                             String newImageUrl = imageUrl1.replace("%2F", "/");
-                            DigitalArtPiece artPiece = new DigitalArtPiece(userId, newImageUrl, price, canBid);
+                            reference = db.collection("Users").document(userId);
+                            reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    if (task.isSuccessful()) {
+                                        DocumentSnapshot document = task.getResult();
+                                        if (document.exists()) {
+                                            name = document.getString("FirstName");
+
+                                        }
+                                    }
+                                }
+                            });
+                            DigitalArtPiece artPiece = new DigitalArtPiece(userId, newImageUrl, price, canBid, name);
                             db.collection("Users").document(userId).collection("DigitalCopy").document(imageId).set(artPiece);
                         });
                     })
