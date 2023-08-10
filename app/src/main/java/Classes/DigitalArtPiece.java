@@ -10,16 +10,18 @@ package Classes;
 import java.util.HashMap;
 
 public class DigitalArtPiece  {
+    String name;
     private String userId;
     private String imageUrl;
     private String price;
     private boolean canBid;
 
-    public DigitalArtPiece(String userId, String imageUrl, String price, boolean canBid) {
+    public DigitalArtPiece(String userId, String imageUrl, String price, boolean canBid, String name) {
         this.userId = userId;
         this.imageUrl = imageUrl;
         this.price = price;
         this.canBid = canBid;
+        this.name = name;
     }
     public DigitalArtPiece() {
         // Default constructor is needed for Firestore deserialization
@@ -54,6 +56,13 @@ public class DigitalArtPiece  {
 
     public void setCanBid(boolean canBid) {
         this.canBid = canBid;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     // Getter and Setter for the 'blurred' attribute

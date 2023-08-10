@@ -10,17 +10,18 @@ package Classes;
 import java.util.HashMap;
 
 public class HardCopyArtPiece  {
-
+    String name;
     private String userId;
     private String imageUrl;
     private String price;
     private boolean canBid;
 
-    public HardCopyArtPiece(String userId, String imageUrl, String price, boolean canBid) {
+    public HardCopyArtPiece(String userId, String imageUrl, String price, boolean canBid, String name) {
         this.userId = userId;
         this.imageUrl = imageUrl;
         this.price = price;
         this.canBid = canBid;
+        this.name = name;
     }
     public HardCopyArtPiece() {
         // Default constructor is needed for Firestore deserialization
@@ -56,6 +57,13 @@ public class HardCopyArtPiece  {
 
     public void setCanBid(boolean canBid) {
         this.canBid = canBid;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     /*@Override

@@ -51,6 +51,7 @@ public class HardCopyActivity extends AppCompatActivity {
     Uri selectedImageUri;
     TextView forHello;
     String hello;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,7 +131,20 @@ public class HardCopyActivity extends AppCompatActivity {
                             int end = imageUrl.indexOf("?");
                             String imageUrl1 = imageUrl.substring(start, end);
                             String newImageUrl = imageUrl1.replace("%2F", "/");
-                            HardCopyArtPiece artPiece = new HardCopyArtPiece(userId, newImageUrl, price, canBid);
+                            reference = db.collection("Users").document(userId);
+                            reference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                    if (task.isSuccessful()) {
+                                        DocumentSnapshot document = task.getResult();
+                                        if (document.exists()) {
+                                            name = document.getString("FirstName");
+
+                                        }
+                                    }
+                                }
+                            });
+                            HardCopyArtPiece artPiece = new HardCopyArtPiece(userId, newImageUrl, price, canBid, name);
                             db.collection("Users").document(userId).collection("HardCopy").document(imageId).set(artPiece);
                         });
                     })
